@@ -1,2 +1,2 @@
 # Higher Or Lower
-Learning React Native
+A mini-game that lets your phone guess which number you picked by telling it `higher` or `lower`.
