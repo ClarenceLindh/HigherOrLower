@@ -1,2 +1,2 @@
 # Higher Or Lower
-Leardning React Native
+Learning React Native
