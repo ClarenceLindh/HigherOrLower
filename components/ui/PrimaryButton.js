@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         color: "#ffffff",
         fontSize: 16,
         textAlign: "center",
-        fontWeight: "bold",
+        fontFamily: 'open-sans',
     },
     pressed: {
         // for iOs
