@@ -4,42 +4,40 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import StartGameScreen from "./screens/StartGameScreen";
 import GamesScreen from "./screens/GameScreen";
+import Colors from './utils/colors'
 
 export default function App() {
-    const [userNumber, setUserNumber] = useState();
+  const [userNumber, setUserNumber] = useState();
 
-    function startGameHandler(selectedNumber) {
-        setUserNumber(selectedNumber);
-    }
+  function startGameHandler(selectedNumber) {
+    setUserNumber(selectedNumber);
+  }
 
-    let screen = <StartGameScreen onStartGame={startGameHandler} />;
+  let screen = <StartGameScreen onStartGame={startGameHandler} />;
 
-    if (userNumber) {
-        screen = <GamesScreen userChoice={userNumber} />;
-    }
+  if (userNumber) {
+    screen = <GamesScreen userChoice={userNumber} />;
+  }
 
-    return (
-        <LinearGradient
-            colors={["#af1b1b", "#daad1c"]}
-            style={styles.rootScreen}
-        >
-            <ImageBackground
-                source={require("./assets/images/background.png")}
-                resizeMode="cover"
-                style={styles.rootScreen}
-                imageStyle={styles.imageStyle}
-            >
-                <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
-            </ImageBackground>
-        </LinearGradient>
-    );
+  return (
+    <LinearGradient colors={[Colors.background1, Colors.background2]} style={styles.rootScreen}>
+      <ImageBackground
+        source={require("./assets/images/background.png")}
+        resizeMode="cover"
+        style={styles.rootScreen}
+        imageStyle={styles.imageStyle}
+      >
+        <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
+      </ImageBackground>
+    </LinearGradient>
+  );
 }
 
 const styles = StyleSheet.create({
-    rootScreen: {
-        flex: 1,
-    },
-    imageStyle: {
-        opacity: 0.1,
-    },
+  rootScreen: {
+    flex: 1,
+  },
+  imageStyle: {
+    opacity: 0.1,
+  },
 });
