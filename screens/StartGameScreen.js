@@ -76,10 +76,10 @@ const styles = StyleSheet.create({
     color: Colors.accent1,
     marginVertical: 16,
     fontFamily: 'open-sans-bold',
-    textAlign: "center",
+    textAlign: 'center',
   },
   buttonsContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   buttonContainer: {
     flex: 1,

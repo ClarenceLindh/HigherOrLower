@@ -17,8 +17,8 @@ export default function App() {
   const [guessRounds, setGuessRounds] = useState(0);
 
   const [fontsLoaded] = useFonts({
-    "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
-    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
+    'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
+    'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -36,8 +36,9 @@ export default function App() {
     setGameIsOver(false);
   }
 
-  function gameOverHandler() {
+  function gameOverHandler(numberOfRounds) {
     setGameIsOver(true);
+    setGuessRounds(numberOfRounds)
   }
 
   function restartHandler() {
@@ -56,8 +57,8 @@ export default function App() {
   if (gameIsOver && userNumber) {
     screen = (
       <GameOverScreen
-        roundsNum={userNumber}
-        userNum={guessRounds}
+        roundsNum={guessRounds}
+        userNum={userNumber}
         onRestart={restartHandler}
       />
     );
@@ -70,8 +71,8 @@ export default function App() {
       onLayout={onLayoutRootView}
     >
       <ImageBackground
-        source={require("./assets/images/background.png")}
-        resizeMode="cover"
+        source={require('./assets/images/background.png')}
+        resizeMode='cover'
         style={styles.rootScreen}
         imageStyle={styles.imageStyle}
       >

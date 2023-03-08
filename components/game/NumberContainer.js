@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     padding: 24,
     margin: 24,
     borderRadius: 8,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   numberText: {
     fontFamily: 'open-sans-bold',
